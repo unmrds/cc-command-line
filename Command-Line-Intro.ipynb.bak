@@ -1,0 +1,514 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# The Command Line - And Why Not?\n",
+    "--------------------------------------------------------------"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Let's start with why not... ##\n",
+    "\n",
+    "Graphical user interfaces are fast, often more than fast enough to suit our needs. GUIs are feature rich, can be intuitive, and often filter out a lot of stuff we don't need to know about and aren't interested in. Nearly everything we need to do can be done simply and quickly using a GUI.\n",
+    "\n",
+    "__Plus:__"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "* It's old fashioned\n",
+    "* It takes learnin'\n",
+    "* Even Neal Stephenson says it's obsolete\n",
+    "* ...\n",
+    "* ...\n",
+    "* ..."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## But some things are just tedious... ##\n",
+    "\n",
+    "For example, cleaning all the PDFs off of the desktop at the reference desk. Backing up files and data. Getting file and permissions info. Routine stuff.\n",
+    "\n",
+    "All that clicking and dragging. We have better things to do with our time. Plus, for some activities, GUIs use an unnecessary amount of resources and can quickly add up to a cluttered workspace.\n",
+    "\n",
+    "__The command line is a great resource for speeding up and automating routine activities without using a lot of processing power. In some cases, it is also better for__\n",
+    "\n",
+    "* Searching for files\n",
+    "* Searching _within_ files\n",
+    "* Reading and writing files and data\n",
+    "* Network activities\n",
+    "\n",
+    "Some file and data recovery processes can __only__ be executed from the command line."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Overview ##\n",
+    "\n",
+    "This morning we will focus on using a command line client to navigate the filesystem, read, and write files. For various good reasons, the emphasis will be on UNIX shell commands which are used on Linux and Mac OS operating systems. Most if not all of the commands covered will not work within the standard Windows command line client. Windows users can and are encouraged to avail themselves of UNIX command line clients:\n",
+    "\n",
+    "* Git provides an excellent client: [https://git-scm.com/](https://git-scm.com/)\n",
+    "* _Minimalist GNU for Windows (mingw)_ underlies the Git client: [http://www.mingw.org/](http://www.mingw.org/)\n",
+    "* Cygwin is another popular option: [https://www.cygwin.com/](https://www.cygwin.com/)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Two good things to know in any context: _clear_ and _--help_.**\n",
+    "\n",
+    "### Navigation ### \n",
+    "\n",
+    "__Where am I and what's here?__"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### pwd ####\n",
+    "\n",
+    "_'pwd'_ is short for 'present working directory.' The output of this command is the absolute path to the directory a user is currently in. Often, knowing the absolute path is necessary in order to move or copy files, or to run scripts.\n",
+    "\n",
+    "#### ls ####\n",
+    "\n",
+    "_'ls'_ lists the contents of a directory or directory tree. It is commonly executed with the '-l' and the '-a' flag.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/home/jovyan/work/01-Command-Line\n"
+     ]
+    }
+   ],
+   "source": [
+    "# set the working directory for the rest of the demonstration\n",
+    "%cd ~/work/01-Command-Line/"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "u'/home/jovyan/work/01-Command-Line'"
+      ]
+     },
+     "execution_count": 86,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "pwd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Command-Line-Intro.ipynb\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "ls"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 88,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "total 12\r\n",
+      "-rw-r--r-- 1 jovyan users 12016 Apr 14 03:57 Command-Line-Intro.ipynb\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "ls -l"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\u001b[0m\u001b[01;34m.\u001b[0m/  \u001b[01;34m..\u001b[0m/  Command-Line-Intro.ipynb  \u001b[01;34m.ipynb_checkpoints\u001b[0m/\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "ls -a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### How do I get out? ####\n",
+    "\n",
+    "__cd__\n",
+    "\n",
+    "_'cd'_ is one command that will also work in the Windows shell, and stands for... _change directory_.\n",
+    "\n",
+    "The fastest way to move up within a folder hierarchy is to use the _dot-dot_ notation for the parent directory:\n",
+    "\n",
+    "_cd .._ to move up one directory, _cd ../.._ to move up two directories, etc.\n",
+    "\n",
+    "\n",
+    "__Quick Check:__\n",
+    "\n",
+    "__How far up can we go from here?__"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 92,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/home/jovyan/work/01-Command-Line\n",
+      "/home/jovyan/work\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "pwd\n",
+    "cd ..\n",
+    "pwd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 93,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/home/jovyan/work/01-Command-Line\n",
+      "/home/jovyan\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "pwd\n",
+    "cd ../..\n",
+    "pwd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Quick Check: ####\n",
+    "\n",
+    "__Navigate to the root directory ('/'), generate a list of its contents, and then navigate back to our working directory.__"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 100,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/home/jovyan/work/01-Command-Line\n",
+      "/\n",
+      "total 72\n",
+      "drwxr-xr-x 105 root root 4096 Apr 12 15:31 .\n",
+      "drwxr-xr-x 105 root root 4096 Apr 12 15:31 ..\n",
+      "drwxr-xr-x   2 root root 4096 Dec  6 04:12 bin\n",
+      "drwxr-xr-x   2 root root 4096 Mar 13  2016 boot\n",
+      "drwxr-xr-x   5 root root  340 Apr 12 15:07 dev\n",
+      "-rwxr-xr-x   1 root root    0 Apr 12 15:07 .dockerenv\n",
+      "drwxr-xr-x 104 root root 4096 Apr 12 15:07 etc\n",
+      "drwxr-xr-x  17 root root 4096 Apr 12 15:07 home\n",
+      "drwxr-xr-x  17 root root 4096 Dec 15 06:59 lib\n",
+      "drwxr-xr-x   2 root root 4096 Sep 28  2016 lib64\n",
+      "drwxr-xr-x   2 root root 4096 May  3  2016 media\n",
+      "drwxr-xr-x   2 root root 4096 May  3  2016 mnt\n",
+      "drwxr-xr-x  16 root root 4096 Apr 12 15:07 opt\n",
+      "dr-xr-xr-x 181 root root    0 Apr 12 15:07 proc\n",
+      "drwx------   2 root root 4096 May  3  2016 root\n",
+      "drwxr-xr-x   4 root root 4096 Sep 28  2016 run\n",
+      "drwxr-xr-x   2 root root 4096 Sep 28  2016 sbin\n",
+      "drwxr-xr-x   2 root root 4096 May  3  2016 srv\n",
+      "dr-xr-xr-x  13 root root    0 Apr 14 03:06 sys\n",
+      "drwxrwxrwt   3 root root 4096 Apr 12 15:31 tmp\n",
+      "drwxr-xr-x  45 root root 4096 Dec 15 07:06 usr\n",
+      "drwxr-xr-x  32 root root 4096 Dec 15 07:06 var\n",
+      "/home/jovyan/work/01-Command-Line\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "pwd\n",
+    "\n",
+    "cd /\n",
+    "pwd\n",
+    "ls -la\n",
+    "cd /home/jovyan/work/01-Command-Line/\n",
+    "\n",
+    "pwd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Two more good things to know:\n",
+    "\n",
+    "* _tab completion:_  Auto-complete file and directory names. \n",
+    "* _up arrow:_ Reload previous commands.\n",
+    "\n",
+    "#### Relative versus Absolute Paths ####\n",
+    "\n",
+    "At first, navigating across directories within the shell may seem slower and more cumbersome than simply using mouse clicks and a GUI. Using tab completion with absolute OR relative paths is an excellent way to increase efficiency.\n",
+    "\n",
+    "The _relative path_ is the path to a directory or file from the context of a specific starting point (usually the present working directory).\n",
+    "\n",
+    "The _absolute path_ is the path to a directory or file from the filesystem root ('/').\n",
+    "\n",
+    "As an example, to navigate to the root directory from our present working directory, we can use\n",
+    "\n",
+    "_cd ../../../_ (using the relative path)\n",
+    "\n",
+    "**OR**\n",
+    "\n",
+    "_cd /_ (using the absolute path)\n",
+    "\n",
+    "The second option is plainly faster in this case. In other contexts, the relative path would be faster. \n",
+    "\n",
+    "Relative and absolute paths can also be used to list the contents and read, write, or delete files in other directories.\n",
+    "\n",
+    "### Read and Write Files ###\n",
+    "\n",
+    "The quickest way to create (empty) directories and files is using _mkdir_ (make directory) and _touch_ (update). \n",
+    "\n",
+    "__Make a directory using your NetID and create a file *[NetID].flag*__"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "# cd /home/jovyan/work/01-Command-Line\n",
+    "# mkdir jwheel01\n",
+    "# cd jwheel01\n",
+    "# touch jwheel01.flag"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can also use _echo_ to copy some text into a new or existing file:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# echo \"this is my flag!\" > jwheel01.flag (writes to a new file or overwrites an existing file)\n",
+    "# echo \"this is my flag!\" >> jwheel01.flag (appends to an existing file)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Two commands for reading files include _cat_ (concatenate) and _less_.\n",
+    "\n",
+    "_cat_ is better for manipulating files, _less_ is recommended for paging through longer files."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# cat jwheel01.flag\n",
+    "# less jwheel01.flag"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Copy, Move, and Delete Files ###\n",
+    "\n",
+    "Remember _'pwd'_? Often, to copy, move, or delete a file it is necessary to know either the relative or absolute paths of the source and destination directories. _cp_ and _mv_ require source and destination paths. Note that it is possible to rename a file when copying it, but we use 'move' to rename a file without copying it.\n",
+    "\n",
+    "* _cp_: Copy.\n",
+    "* _mv_: Move AND/OR rename.\n",
+    "* _rm_: Remove."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# Copy a file within the current directory:\n",
+    "# cp jwheel01.flag ./jwheel02.flag\n",
+    "\n",
+    "# Copy a file to a different directory:\n",
+    "# cp jwheel01.flag ../jwheel01.flag\n",
+    "\n",
+    "# Rename a file within the current directory:\n",
+    "# mv jwheel02.flag ./myFlag.flag\n",
+    "\n",
+    "# Move a file to a different directory AND rename it:\n",
+    "# mv myFlag.flag ../jonsFlag.flag\n",
+    "\n",
+    "# Remove a file:\n",
+    "# rm ../jonsFlag.flag"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "## Practice Time! ##\n",
+    "\n",
+    "You created a directory. You put a _.flag_ file in it. So did everyone else in the room. So now:\n",
+    "\n",
+    "**Capture as many other people's flags as you can by MOVING their _.flag_ files to YOUR directory. After three minutes, the person with the most flags in their directory WINS!**\n",
+    "\n",
+    "**Rules:**\n",
+    "\n",
+    "1. Be ruthless: There is no such thing as cheating.\n",
+    "2. Cheating is encouraged."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## What Next ##\n",
+    "\n",
+    "Some additional learning materials\n",
+    "\n",
+    "* Lynda.com [*Learn the Linux Command Line: The Basics*](http://www.lynda.com/Linux-tutorials/Learn-Linux-Command-Line-Basics/435539-2.html?org=unm.edu) - particularly:\n",
+    "\t* Introduction\n",
+    "\t* 1. Command-Line Basics\n",
+    "\t* 2. Files, Folders, and Permissions\n",
+    "\n",
+    "* [Webmonkey \"Unix Guide\"](http://www.webmonkey.com/2010/02/unix-guide/)\n",
+    "\n",
+    "* [Linux Command Line Cheatsheet](http://www.cheatography.com/davechild/cheat-sheets/linux-command-line/)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "celltoolbar": "Raw Cell Format",
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
