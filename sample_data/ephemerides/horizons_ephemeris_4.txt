@@ -1,0 +1,193 @@
+*******************************************************************************
+ Revised: December 14, 2018           Neptune                               899
+ 
+ PHYSICAL DATA (update 2018-Aug-15):
+  Mass x10^24 (kg)      = 102.413         Density (g/cm^3)       =  1.638
+  Equat. radius (1 bar) = 24766+-15 km    Volume, 10^10 km^3     = 6254     
+  Vol. mean radius (km) = 24624+-21       Polar radius (km)      = 24342+-30
+  Geometric Albedo      = 0.41            Flattening             =  0.0171
+  Sid. rot. period (III)= 16.11+-0.01 hr  Sid. rot. rate (rad/s) =  0.000108338 
+  Mean solar day, h     =~16.11 h         
+  GM (km^3/s^2)         = 6835099.5       GM 1-sigma (km^3/s^2)  = +-10 
+  Equ. grav, ge (m/s^2) = 11.15           Pol. grav, gp (m/s^2)  = 11.41+-0.03
+  Visual magnitude V(1,0)= -6.87
+  Vis. mag. (opposition)=  +7.84          Obliquity to orbit     = 28.32 deg
+  Sidereal orbit period = 164.788501027 y Sidereal orbit period  = 60189 d
+  Mean daily motion     = 0.006020076dg/d Mean orbit velocity    =  5.43 km/s 
+  Atmos. temp. (1 bar)  =  72+-2 K        Escape speed (1 bar)  =  23.5 km/s     
+  Aroche(ice)/Rp        =  2.98           Hill's sphere rad., Rp = 4700
+                                 Perihelion  Aphelion    Mean
+  Solar Constant (W/m^2)         1.54        1.49        1.51
+  Maximum Planetary IR (W/m^2)   0.52        0.52        0.52
+  Minimum Planetary IR (W/m^2)   0.52        0.52        0.52
+*******************************************************************************
+ 
+ 
+*******************************************************************************
+Ephemeris / WWW_USER Fri Oct 25 11:50:47 2019 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Neptune (899)                   {source: nep090_merged_DE435}
+Center body name: Earth (399)                     {source: nep090_merged_DE435}
+Center-site name: GEOCENTRIC
+*******************************************************************************
+Start time      : A.D. 2019-Oct-25 00:00:00.0000 UT      
+Stop  time      : A.D. 2019-Nov-24 00:00:00.0000 UT      
+Step-size       : 1440 minutes
+*******************************************************************************
+Target pole/equ : IAU_NEPTUNE                     {West-longitude positive}
+Target radii    : 24764.0 x 24764.0 x 24341.0 km  {Equator, meridian, pole}    
+Center geodetic : 0.00000000,0.00000000,0.0000000 {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.00000000,0.00000000,0.0000000 {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : High-precision EOP model        {East-longitude positive}
+Center radii    : 6378.1 x 6378.1 x 6356.8 km     {Equator, meridian, pole}    
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: DE431mx}
+Rel. light bend : Sun, EARTH                      {source: nep090_merged_DE435}
+Rel. lght bnd GM: 1.3271E+11, 3.9860E+05 km^3/s^2                              
+Atmos refraction: NO (AIRLESS)
+RA format       : HMS
+Time format     : CAL 
+EOP file        : eop.191024.p200115                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2019-OCT-24. PREDICTS-> 2020-JAN-14
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+**************************************************************************************************************
+ Date__(UT)__HR:MN     R.A._(ICRF/J2000.0)_DEC  APmag  S-brt            delta      deldot    S-O-T /r    S-T-O
+**************************************************************************************************************
+$$SOE
+ 2019-Oct-25 00:00     23 09 56.72 -06 30 36.8   7.84   9.42 29.2231270540246  21.3679051 134.9499 /T   1.3427
+ 2019-Oct-26 00:00     23 09 52.86 -06 30 59.8   7.84   9.42 29.2355753960604  21.7384804 133.9361 /T   1.3659
+ 2019-Oct-27 00:00     23 09 49.11 -06 31 22.2   7.84   9.42 29.2482357086514  22.1017738 132.9222 /T   1.3888
+ 2019-Oct-28 00:00     23 09 45.45 -06 31 44.0   7.84   9.42 29.2611035580610  22.4571248 131.9082 /T   1.4112
+ 2019-Oct-29 00:00     23 09 41.89 -06 32 05.1   7.84   9.42 29.2741743717116  22.8047014 130.8940 /T   1.4332
+ 2019-Oct-30 00:00     23 09 38.43 -06 32 25.6   7.84   9.42 29.2874438153536  23.1450359 129.8798 /T   1.4547
+ 2019-Oct-31 00:00     23 09 35.08 -06 32 45.3   7.85   9.42 29.3009077790463  23.4782635 128.8655 /T   1.4757
+ 2019-Nov-01 00:00     23 09 31.83 -06 33 04.4   7.85   9.42 29.3145620218270  23.8038182 127.8513 /T   1.4962
+ 2019-Nov-02 00:00     23 09 28.69 -06 33 22.8   7.85   9.42 29.3284018812751  24.1209351 126.8370 /T   1.5163
+ 2019-Nov-03 00:00     23 09 25.66 -06 33 40.5   7.85   9.42 29.3424223797370  24.4293882 125.8227 /T   1.5359
+ 2019-Nov-04 00:00     23 09 22.73 -06 33 57.5   7.85   9.42 29.3566186396701  24.7297155 124.8085 /T   1.5550
+ 2019-Nov-05 00:00     23 09 19.91 -06 34 13.7   7.85   9.42 29.3709861903185  25.0226519 123.7944 /T   1.5736
+ 2019-Nov-06 00:00     23 09 17.21 -06 34 29.3   7.85   9.42 29.3855208540008  25.3083765 122.7803 /T   1.5917
+ 2019-Nov-07 00:00     23 09 14.62 -06 34 44.1   7.85   9.42 29.4002183314125  25.5863298 121.7663 /T   1.6094
+ 2019-Nov-08 00:00     23 09 12.14 -06 34 58.2   7.85   9.42 29.4150739170339  25.8558017 120.7523 /T   1.6265
+ 2019-Nov-09 00:00     23 09 09.77 -06 35 11.5   7.85   9.42 29.4300826400964  26.1166761 119.7384 /T   1.6430
+ 2019-Nov-10 00:00     23 09 07.52 -06 35 24.1   7.86   9.42 29.4452396857570  26.3695627 118.7246 /T   1.6591
+ 2019-Nov-11 00:00     23 09 05.39 -06 35 36.0   7.86   9.42 29.4605406618046  26.6151787 117.7109 /T   1.6746
+ 2019-Nov-12 00:00     23 09 03.37 -06 35 47.1   7.86   9.42 29.4759814361905  26.8536210 116.6972 /T   1.6897
+ 2019-Nov-13 00:00     23 09 01.47 -06 35 57.5   7.86   9.42 29.4915577149400  27.0842886 115.6836 /T   1.7041
+ 2019-Nov-14 00:00     23 08 59.69 -06 36 07.0   7.86   9.42 29.5072647975933  27.3065134 114.6700 /T   1.7181
+ 2019-Nov-15 00:00     23 08 58.03 -06 36 15.9   7.86   9.42 29.5230977597291  27.5202615 113.6565 /T   1.7315
+ 2019-Nov-16 00:00     23 08 56.49 -06 36 23.9   7.86   9.42 29.5390518641930  27.7261460 112.6430 /T   1.7444
+ 2019-Nov-17 00:00     23 08 55.07 -06 36 31.2   7.86   9.42 29.5551227624567  27.9247584 111.6296 /T   1.7567
+ 2019-Nov-18 00:00     23 08 53.77 -06 36 37.7   7.87   9.42 29.5713062602939  28.1159727 110.6162 /T   1.7685
+ 2019-Nov-19 00:00     23 08 52.59 -06 36 43.4   7.87   9.42 29.5875978721604  28.2989820 109.6028 /T   1.7797
+ 2019-Nov-20 00:00     23 08 51.54 -06 36 48.3   7.87   9.42 29.6039926056197  28.4729817 108.5895 /T   1.7904
+ 2019-Nov-21 00:00     23 08 50.61 -06 36 52.5   7.87   9.42 29.6204851790134  28.6378362 107.5762 /T   1.8005
+ 2019-Nov-22 00:00     23 08 49.81 -06 36 55.8   7.87   9.42 29.6370704261394  28.7939988 106.5630 /T   1.8101
+ 2019-Nov-23 00:00     23 08 49.13 -06 36 58.4   7.87   9.42 29.6537434532244  28.9418214 105.5498 /T   1.8191
+ 2019-Nov-24 00:00     23 08 48.58 -06 37 00.1   7.87   9.42 29.6704993753627  29.0809337 104.5368 /T   1.8275
+$$EOE
+**************************************************************************************************************
+Column meaning:
+ 
+TIME
+
+  Times PRIOR to 1962 are UT1, a mean-solar time closely related to the
+prior but now-deprecated GMT. Times AFTER 1962 are in UTC, the current
+civil or "wall-clock" time-scale. UTC is kept within 0.9 seconds of UT1
+by introduction of integer leap-seconds for 1972 and later.
+
+  Conversion from the internal Barycentric Dynamical Time (TDB) to the
+non-uniform civil UT time-scale requested for output has not been determined
+for UTC times after the next July or January 1st. Therefore, the last known
+leap-second is used as a constant over future intervals.
+
+  Time tags refer to the UT time-scale conversion on Earth regardless of
+where the observer is located in the solar system. For example, if an
+observation from the surface of another body has an output time-tag of
+12:31:00 UT, it refers to a time-scale conversion from TDB to UT valid
+at the center of the Earth at that instant, not the observer's location
+elsewhere in the solar system, where clock rates may differ slightly due
+to the local gravity field and there is no precisely defined or adopted
+"UT" analog.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date. Calendar dates prior to 1582-Oct-15 are in the
+Julian calendar system. Later calendar dates are in the Gregorian system.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+ R.A._(ICRF/J2000.0)_DEC =
+   Astrometric right ascension and declination of the TARGET CENTER with
+respect to the observing site in the coordinates of the ICRF/J2000 inertial
+reference frame. Compensated for down-leg light-time.
+   Units: RA in hours-minutes-seconds of time   (HH MM SS.ff),
+         DEC in angular degrees-minutes-seconds (DD MM SS.f)
+ 
+ APmag S-brt =
+   Target's approximate apparent visual magnitude & surface brightness. For
+planets and satellites, values are available only for solar phase angles in the
+range generally visible from Earth. This is to avoid extrapolation of models
+beyond their valid (data-based) limits.
+   Units: MAGNITUDE & VISUAL MAGNITUDES PER SQUARE ARCSECOND
+ 
+ delta  deldot =
+   Range ("delta") and range-rate ("delta-dot") of target center with respect
+to the observer at the instant light seen by the observer at print-time would
+have left the target center (print-time minus down-leg light-time); the
+distance traveled by a light ray emanating from the center of the target and
+recorded by the observer at print-time. "deldot" is a projection of the
+velocity vector along this ray, the light-time-corrected line-of-sight from the
+coordinate center, and indicates relative motion. A positive "deldot" means the
+target center is moving away from the observer (coordinate center). A negative
+"deldot" means the target center is moving toward the observer.
+Units: AU and KM/S
+ 
+ S-O-T /r =
+    Sun-Observer-Target angle; target's apparent SOLAR ELONGATION seen from
+the observer location at print-time. Angular units: DEGREES
+
+    The '/r' column indicates the target's apparent position relative to
+the Sun in the observer's sky, as described below:
+
+    For an observing location on the surface of a rotating body
+(considering its rotational sense):
+
+    /T indicates target TRAILS Sun (evening sky; rises and sets AFTER Sun)
+    /L indicates target LEADS Sun  (morning sky; rises and sets BEFORE Sun)
+
+For an observing point NOT on a rotating body (such as a spacecraft), the
+"leading" and "trailing" condition is defined by the observer's
+heliocentric orbital motion: if continuing in the observer's current
+direction of heliocentric motion would encounter the target's apparent
+longitude first, followed by the Sun's, the target LEADS the Sun as seen by
+the observer. If the Sun's apparent longitude would be encountered first,
+followed by the target's, the target TRAILS the Sun.
+
+NOTE: The S-O-T solar elongation angle is numerically the minimum
+separation angle of the Sun and target in the sky in any direction. It
+does NOT indicate the amount of separation in the leading or trailing
+directions, which are defined in the equator of a spherical coordinate
+system.
+ 
+ S-T-O =
+   "S-T-O" is the Sun->Target->Observer angle; the interior vertex angle at
+target center formed by a vector to the apparent center of the Sun at
+reflection time on the target and the apparent vector to the observer at
+print-time. Slightly different from true PHASE ANGLE (requestable separately)
+at the few arcsecond level in that it includes stellar aberration on the
+down-leg from target to observer.  Units: DEGREES
+
+
+ Computations by ...
+     Solar System Dynamics Group, Horizons On-Line Ephemeris System
+     4800 Oak Grove Drive, Jet Propulsion Laboratory
+     Pasadena, CA  91109   USA
+     Information: http://ssd.jpl.nasa.gov/
+     Connect    : telnet://ssd.jpl.nasa.gov:6775  (via browser)
+                  telnet ssd.jpl.nasa.gov 6775    (via command-line)
+     Author     : Jon.D.Giorgini@jpl.nasa.gov
+
+**************************************************************************************************************
