@@ -1,3 +1,5 @@
+# Coffee & Code - The Command Line, An Introduction
+
 This workshop will provide a hands-on introduction to working in the UNIX-based command line that is available in the Windows, Mac, and Linux operating systems. With basic knowledge of the command line you can efficiently interact with hundreds or thousands of files, automate processes that you otherwise perform manually, and overall increase the efficiency and reproducibility of your work.
 
 ## Setup Instructions
