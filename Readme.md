@@ -4,10 +4,6 @@ This workshop will provide a hands-on introduction to working in the UNIX-based 
 
 ## Setup Instructions
 
-If you are unable to install or run a local shell environment on the computer you are using for the workshop you can also open a web-based environement that contains the workshop's lessons and provides a functional command line terminal through PanGeo's Binder environment.
-
-[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/unmrds/cc-command-line/master)
-
 ### Windows
 Computers with Windows operating systems do not automatically have a Unix Shell program installed.
 Following the model used by Software Carpentries for their [Unix Shell](http://swcarpentry.github.io/shell-novice/) lesson, we encourage you to use an emulator included in [Git for Windows][https://carpentries.github.io/workshop-template/#shell-windows], which gives you access to both Bash shell commands and Git.
